@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.emergencies.dao.EvaluationDAO">
+    <resultMap id="Evaluation" type="com.emergencies.entity.Evaluation">
+        <id column="evaluationId" property="evaluationId" jdbcType="NUMERIC"/>
+        <result column="baseId" property="baseId" jdbcType="NUMERIC"/>
+        <result column="expert" property="expert" jdbcType="CHAR"/>
+        <result column="rank" property="rank" jdbcType="NUMERIC"/>
+        <result column="evaluationDesc" property="evaluationDesc" jdbcType="VARCHAR"/>
+        <result column="control" property="control" jdbcType="VARCHAR"/>
+        <result column="response" property="response" jdbcType="VARCHAR"/>
+        <result column="prevention" property="prevention" jdbcType="VARCHAR"/>
+        <result column="rescue" property="rescue" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="evaluation_Column_List">
+        baseId, expert, rank, evaluationDesc, control, response, prevention, rescue
+    </sql>
+
+    <insert id="insert" parameterType="com.emergencies.entity.Evaluation" useGeneratedKeys="true"
+            keyProperty="evaluationId">
+        INSERT INTO
+        evaluation
+        (baseId, expert, rank, evaluationDesc, control, response, prevention, rescue)
+        VALUES
+        (#{baseId}, #{expert}, #{rank}, #{evaluationDesc}, #{control}, #{response}, #{prevention}, #{rescue})
+    </insert>
+
+    <insert id="insertSelectKey" parameterType="com.emergencies.entity.Evaluation">
+        <selectKey keyProperty="evaluationId" resultType="int">
+            select LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO
+        evaluation
+        (baseId, expert, rank, evaluationDesc, control, response, prevention, rescue)
+        VALUES
+        (#{baseId}, #{expert}, #{rank}, #{evaluationDesc}, #{control}, #{response}, #{prevention}, #{rescue})
+    </insert>
+
+</mapper>

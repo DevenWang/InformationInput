@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.emergencies.dao.DetailsInfoDAO">
+    <resultMap id="DetailsInfo" type="com.emergencies.entity.DetailsInfo">
+        <id column="detailsId" property="detailsId" jdbcType="NUMERIC"/>
+        <result column="baseId" property="baseId" jdbcType="NUMERIC"/>
+        <result column="loss" property="loss" jdbcType="DOUBLE"/>
+        <result column="injured" property="injured" jdbcType="NUMERIC"/>
+        <result column="death" property="death" jdbcType="NUMERIC"/>
+        <result column="environmental" property="environmental" jdbcType="VARCHAR"/>
+        <result column="social" property="social" jdbcType="VARCHAR"/>
+        <result column="disasterType" property="disasterType" jdbcType="VARCHAR"/>
+        <result column="hazards" property="hazards" jdbcType="VARCHAR"/>
+        <result column="bearing" property="bearing" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="detailsInfo_Column_List">
+        basicId, loss, injured, death, environmental, social, disasterType, hazards, bearing
+    </sql>
+
+    <insert id="insert" parameterType="com.emergencies.entity.DetailsInfo" useGeneratedKeys="true"
+            keyProperty="detailsId">
+        INSERT INTO
+        detailsInfo
+        (baseId, loss, injured, death, environmental, social, disasterType, hazards, bearing)
+        VALUES
+        (#{baseId}, #{loss}, #{injured}, #{death}, #{environmental}, #{social}, #{disasterType}, #{hazards}, #{bearing})
+    </insert>
+
+    <insert id="insertSelectKey" parameterType="com.emergencies.entity.DetailsInfo">
+        <selectKey keyProperty="detailsId" resultType="int">
+            select LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO
+        detailsInfo
+        (baseId, loss, injured, death, environmental, social, disasterType, hazards, bearing)
+        VALUES
+        (#{baseId}, #{loss}, #{injured}, #{death}, #{environmental}, #{social}, #{disasterType}, #{hazards}, #{bearing})
+    </insert>
+
+</mapper>

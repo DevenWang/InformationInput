@@ -1,0 +1,397 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" id="part2">
+        <h3 class="panel-title">事件详细信息</h3>
+    </div>
+    <div class="panel-body" id="detailedInfo">
+
+        <form class="form-horizontal">
+
+            <div class="form-group">
+                <label for="injured" class="col-sm-2 control-label">受伤人数</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="injured">
+                        <span class="input-group-addon">人</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="death" class="col-sm-2 control-label">死亡人数</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="death">
+                        <span class="input-group-addon">人</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="loss" class="col-sm-2 control-label">经济损失</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                                        <span class="input-group-addon"><span
+                                                class="glyphicon glyphicon-usd"></span></span>
+                        <input type="number" class="form-control" id="loss">
+                        <span class="input-group-addon">万元</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="environmental" class="col-sm-2 control-label">环境影响</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="environmental">
+                        <div class="input-group-addon" id="environmental_tu">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </div>
+                        <div class="input-group-addon" id="environmental_add">
+                            完成编辑
+                        </div>
+                    </div>
+                    <div id="environmental_edit">
+                                    <textarea rows="30" cols="50" name="environmental_edit1"
+                                              placeholder="请输入..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="social" class="col-sm-2 control-label">社会影响</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="social">
+                        <div class="input-group-addon" id="social_tu">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </div>
+                        <div class="input-group-addon" id="social_add">
+                            完成编辑
+                        </div>
+                    </div>
+                    <div id="social_edit">
+                                        <textarea rows="30" cols="50" name="social_edit1"
+                                                  placeholder="请输入..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="disasterType" class="col-sm-2 control-label">灾害分类</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input class="form-control" id="disasterType" type="text">
+                        <div class="input-group-btn">
+                            <a class="btn btn-default" id="disasterType_popover" role="button"
+                               rel="popover">
+                                                <span class="glyphicon glyphicon-question-sign"
+                                                      aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="hazards" class="col-sm-2 control-label">致灾因子</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input class="form-control" id="hazards" type="text">
+                        <div class="input-group-btn">
+                            <a class="btn btn-default" id="hazards_popover" role="button" rel="popover">
+                                                <span class="glyphicon glyphicon-question-sign"
+                                                      aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="bearing" class="col-sm-2 control-label">承载体</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input class="form-control" id="bearing" type="text">
+                        <div class="input-group-btn">
+                            <a class="btn btn-default" id="bearing_popover" role="button" rel="popover">
+                                                <span class="glyphicon glyphicon-question-sign"
+                                                      aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading" id="part3">
+        <h3 class="panel-title">专家评估</h3>
+    </div>
+    <div class="panel-body" id="evaluation">
+
+        <form class="form-horizontal">
+
+            <div class="form-group">
+                <label for="expert" class="col-sm-2 control-label">专家号</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input class="form-control" id="expert" type="text">
+                        <div class="input-group-btn">
+                            <a class="btn btn-default" id="expert_popover" role="button" rel="popover">
+                                                <span class="glyphicon glyphicon-question-sign"
+                                                      aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rank" class="col-sm-2 control-label">评估等级</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+
+                        <select id="rank" class="form-control">
+                            <option value="0" disabled="disabled">-请选择危害程度-</option>
+                            <option value="1">一级</option>
+                            <option value="2">二级</option>
+                            <option value="3">三级</option>
+                            <option value="4">四级</option>
+                        </select>
+                        <div class="input-group-btn">
+                            <a class="btn btn-default" id="rank_popover" role="button" rel="popover">
+                                                <span class="glyphicon glyphicon-question-sign"
+                                                      aria-hidden="true"></span>
+                            </a>
+                        </div>
+
+
+                        <!--自己填写等级-->
+                        <!--<input class="form-control" id="rank" type="text">-->
+                        <!--<div class="input-group-btn">-->
+                        <!--<a class="btn btn-default" id="rank_popover" role="button" rel="popover">-->
+                        <!--<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>-->
+                        <!--</a>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="evaluationDesc" class="col-sm-2 control-label">评估描述</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="evaluationDesc">
+                        <div class="input-group-addon" id="evaluationDesc_tu">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </div>
+                        <div class="input-group-addon" id="evaluationDesc_add">
+                            完成编辑
+                        </div>
+                    </div>
+                    <div id="evaluationDesc_edit">
+                                    <textarea rows="30" cols="50" name="evaluationDesc_edit1"
+                                              placeholder="请输入..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="control" class="col-sm-2 control-label">社会控制</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="control">
+                        <div class="input-group-addon" id="control_tu">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </div>
+                        <div class="input-group-addon" id="control_add">
+                            完成编辑
+                        </div>
+                    </div>
+                    <div id="control_edit">
+                                        <textarea rows="30" cols="50" name="control_edit1"
+                                                  placeholder="请输入..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="response" class="col-sm-2 control-label">行为反应</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="response">
+                        <div class="input-group-addon" id="response_tu">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </div>
+                        <div class="input-group-addon" id="response_add">
+                            完成编辑
+                        </div>
+                    </div>
+                    <div id="response_edit">
+                                        <textarea rows="30" cols="50" name="response_edit1"
+                                                  placeholder="请输入..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="prevention" class="col-sm-2 control-label">工程预防</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="prevention">
+                        <div class="input-group-addon" id="prevention_tu">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </div>
+                        <div class="input-group-addon" id="prevention_add">
+                            完成编辑
+                        </div>
+                    </div>
+                    <div id="prevention_edit">
+                                    <textarea rows="30" cols="50" name="prevention_edit1"
+                                              placeholder="请输入..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rescue" class="col-sm-2 control-label">灾害救援</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="rescue">
+                        <div class="input-group-addon" id="rescue_tu">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </div>
+                        <div class="input-group-addon" id="rescue_add">
+                            完成编辑
+                        </div>
+                    </div>
+                    <div id="rescue_edit">
+                                        <textarea rows="30" cols="50" name="rescue_edit1"
+                                                  placeholder="请输入..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading" id="part4">
+        <h3 class="panel-title">相关资料</h3>
+    </div>
+    <input id="others_num" type="number" hidden>
+
+    <div class="panel-body" id="others">
+
+        <div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th class="col-sm-5">资料简介</th>
+                            <th class="col-sm-5">辅助资料</th>
+                            <th class="col-sm-2">删除</th>
+                        </tr>
+                        </thead>
+                        <tbody id="others_ready">
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <form class="form-horizontal">
+
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading btn btn-default" id="add_others"><span
+                        class="glyphicon glyphicon-plus"></span>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="othersDesc" class="col-sm-2 control-label">资料简介</label>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="othersDesc">
+                                <div class="input-group-addon" id="othersDesc_tu">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                </div>
+                                <div class="input-group-addon" id="othersDesc_add">
+                                    完成编辑
+                                </div>
+                            </div>
+                            <div id="othersDesc_edit">
+                                    <textarea rows="30" cols="50" name="othersDesc_edit1"
+                                              placeholder="请输入..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="othersInfo" class="col-sm-2 control-label">辅助资料</label>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="othersInfo">
+                                <div class="input-group-addon" id="othersInfo_tu">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                </div>
+                                <div class="input-group-addon" id="othersInfo_add">
+                                    完成编辑
+                                </div>
+                            </div>
+                            <div id="othersInfo_edit">
+                                    <textarea rows="30" cols="50" name="othersInfo_edit1"
+                                              placeholder="请输入..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!--<div class="form-group">-->
+            <!--<label for="othersDesc" class="col-sm-2 control-label">资料简介</label>-->
+            <!--<div class="col-sm-8">-->
+            <!--<div class="input-group">-->
+            <!--<input type="text" class="form-control" id="othersDesc">-->
+            <!--<div class="input-group-addon" id="othersDesc_tu">-->
+            <!--<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>-->
+            <!--</div>-->
+            <!--<div class="input-group-addon" id="othersDesc_add">-->
+            <!--完成编辑-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div id="othersDesc_edit">-->
+            <!--<textarea rows="30" cols="50" name="othersDesc_edit1"-->
+            <!--placeholder="请输入..."></textarea>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+            <!--<label for="othersInfo" class="col-sm-2 control-label">辅助资料</label>-->
+            <!--<div class="col-sm-8">-->
+            <!--<div class="input-group">-->
+            <!--<input type="text" class="form-control" id="othersInfo">-->
+            <!--<div class="input-group-addon" id="othersInfo_tu">-->
+            <!--<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>-->
+            <!--</div>-->
+            <!--<div class="input-group-addon" id="othersInfo_add">-->
+            <!--完成编辑-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div id="othersInfo_edit">-->
+            <!--<textarea rows="30" cols="50" name="othersInfo_edit1"-->
+            <!--placeholder="请输入..."></textarea>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+
+        </form>
+
+
+    </div>
+</div>
