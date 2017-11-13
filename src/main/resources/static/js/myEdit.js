@@ -61,6 +61,10 @@ $("#baseDesc_add").click(function () {
 //            var ctext = CKEDITOR.instances.baseDesc_edit.getData();
     var ctext1 = CKEDITOR.instances.baseDesc_edit1.document.getBody().getText();
     $("#baseDesc").val(ctext1);
+
+    $('#totalForm').data('bootstrapValidator')
+        .updateStatus('baseDesc', 'NOT_VALIDATED', null)
+        .validateField('baseDesc');
 });
 
 $("#environmental_add").click(function () {
@@ -72,6 +76,10 @@ $("#environmental_add").click(function () {
 //            var ctext = CKEDITOR.instances.baseDesc_edit.getData();
     var ctext1 = CKEDITOR.instances.environmental_edit1.document.getBody().getText();
     $("#environmental").val(ctext1);
+
+    $('#totalForm').data('bootstrapValidator')
+        .updateStatus('environmental', 'NOT_VALIDATED', null)
+        .validateField('environmental');
 });
 $("#social_add").click(function () {
     $("#social_edit").hide();
@@ -82,6 +90,10 @@ $("#social_add").click(function () {
 //            var ctext = CKEDITOR.instances.baseDesc_edit.getData();
     var ctext1 = CKEDITOR.instances.social_edit1.document.getBody().getText();
     $("#social").val(ctext1);
+
+    $('#totalForm').data('bootstrapValidator')
+        .updateStatus('social', 'NOT_VALIDATED', null)
+        .validateField('social');
 });
 $("#evaluationDesc_add").click(function () {
     $("#evaluationDesc_edit").hide();
@@ -92,6 +104,10 @@ $("#evaluationDesc_add").click(function () {
 //            var ctext = CKEDITOR.instances.baseDesc_edit.getData();
     var ctext1 = CKEDITOR.instances.evaluationDesc_edit1.document.getBody().getText();
     $("#evaluationDesc").val(ctext1);
+
+    $('#totalForm').data('bootstrapValidator')
+        .updateStatus('evaluationDesc', 'NOT_VALIDATED', null)
+        .validateField('evaluationDesc');
 });
 $("#control_add").click(function () {
     $("#control_edit").hide();
@@ -102,6 +118,10 @@ $("#control_add").click(function () {
 //            var ctext = CKEDITOR.instances.baseDesc_edit.getData();
     var ctext1 = CKEDITOR.instances.control_edit1.document.getBody().getText();
     $("#control").val(ctext1);
+
+    $('#totalForm').data('bootstrapValidator')
+        .updateStatus('control', 'NOT_VALIDATED', null)
+        .validateField('control');
 });
 $("#response_add").click(function () {
     $("#response_edit").hide();
@@ -112,6 +132,10 @@ $("#response_add").click(function () {
 //            var ctext = CKEDITOR.instances.baseDesc_edit.getData();
     var ctext1 = CKEDITOR.instances.response_edit1.document.getBody().getText();
     $("#response").val(ctext1);
+
+    $('#totalForm').data('bootstrapValidator')
+        .updateStatus('response', 'NOT_VALIDATED', null)
+        .validateField('response');
 });
 $("#prevention_add").click(function () {
     $("#prevention_edit").hide();
@@ -122,6 +146,10 @@ $("#prevention_add").click(function () {
 //            var ctext = CKEDITOR.instances.baseDesc_edit.getData();
     var ctext1 = CKEDITOR.instances.prevention_edit1.document.getBody().getText();
     $("#prevention").val(ctext1);
+
+    $('#totalForm').data('bootstrapValidator')
+        .updateStatus('prevention', 'NOT_VALIDATED', null)
+        .validateField('prevention');
 });
 $("#rescue_add").click(function () {
     $("#rescue_edit").hide();
@@ -132,6 +160,10 @@ $("#rescue_add").click(function () {
 //            var ctext = CKEDITOR.instances.baseDesc_edit.getData();
     var ctext1 = CKEDITOR.instances.rescue_edit1.document.getBody().getText();
     $("#rescue").val(ctext1);
+
+    $('#totalForm').data('bootstrapValidator')
+        .updateStatus('rescue', 'NOT_VALIDATED', null)
+        .validateField('rescue');
 });
 $("#othersDesc_add").click(function () {
     $("#othersDesc_edit").hide();
