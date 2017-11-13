@@ -15,7 +15,6 @@ $('.end_datetime').datetimepicker({
     weekStart: 1,
     autoclose: 1,
     endDate: new Date(),
-    endDate: new Date(),
     todayHighlight: true,
     showMeridian: 1
 }).on('hide', function (e) {

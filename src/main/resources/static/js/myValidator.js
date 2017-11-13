@@ -47,6 +47,18 @@ $(function () {
                 validators: {
                     notEmpty: {
                         message: '开始时间不能为空!'
+                    },
+                    callback: {
+                        message: '开始日期不能大于结束日期',
+                        callback: function (value, validator, $field) {
+
+                            var end = $("#end").val();
+                            if (end.length <= 0 || end == null) {
+                                return true;
+                            } else {
+                                return value <= end;
+                            }
+                        }
                     }
                 }
             },
@@ -55,6 +67,19 @@ $(function () {
                 validators: {
                     notEmpty: {
                         message: '结束时间不能为空!'
+                    },
+                    callback: {
+                        message: '结束日期不能小于开始日期',
+                        callback: function (value, validator, $field) {
+
+                            var start = $("#start").val();
+                            if (start.length <= 0 || start == null) {
+                                return true;
+                            } else {
+                                return value >= start;
+                            }
+
+                        }
                     }
                 }
             },
