@@ -94,10 +94,6 @@ public class IndexController {
         int death_int = Integer.parseInt(death);
         int rank_int = Integer.parseInt(rank);
 
-        try {
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
 
         if (hazards == null) {
             hazards = "";

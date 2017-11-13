@@ -7,7 +7,7 @@ $(function () {
         //定时储存
         ref = setInterval(function () {
             addLocalStorage();
-        }, 60000);
+        }, 10000);
 
     }
 });
